@@ -1,4 +1,4 @@
-# 🌐 FUTUREINTERN TASK 2
+# 🌐 FUTURE  INTERN TASK 2
 
 **Task**: Build a file upload/download portal with AES encryption to secure files at rest and in transit.  
 **Skills Gained**: Web development, encryption implementation, secure file handling, key management.  
