@@ -59,15 +59,6 @@ This is a secure file upload and download portal built with **Python Flask** tha
 
 ---
 
----
-
-## 🧪 How It Works
-
-1. **Upload** a file on `/` → the app encrypts and stores it in `uploads/`
-2. Visit `/files` to view a list of encrypted files
-3. Click:
-   - 🔒 **Download Encrypted** → downloads encrypted `.enc` file
-   - 🔓 **Decrypt & Download** → decrypts and downloads the usable file
 
 ---
 
