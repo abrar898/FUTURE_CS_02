@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encrypted Files</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-400">FileSecuro</h1>
+      <ul class="flex space-x-6">
+        <li><a href="/" class="hover:text-blue-300">Home</a></li>
+        <li><a href="/files" class="hover:text-blue-300">Files</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Encrypted Files Section -->
+  <section class="py-16 px-6 md:px-16 bg-gray-900 min-h-screen">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold text-blue-400 mb-6">🔐 Encrypted Files</h2>
+      <ul class="space-y-6">
+        {% for file in files %}
+        <li class="bg-gray-800 border border-gray-700 p-4 rounded-md shadow hover:bg-gray-700 transition">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <span class="text-white font-medium">{{ file }}</span>
+            <div class="flex space-x-4">
+              <a href="{{ url_for('download', filename=file) }}"
+                 class="text-blue-500 hover:underline flex items-center">
+                🔒 Download Encrypted
+              </a>
+              <a href="{{ url_for('decrypt_and_prepare', filename=file) }}"
+                 class="text-green-400 hover:underline flex items-center">
+                🔓 Decrypt & Download
+              </a>
+            </div>
+          </div>
+        </li>
+        {% else %}
+        <li class="text-gray-400">No encrypted files found.</li>
+        {% endfor %}
+      </ul>
+
+      <div class="mt-10">
+        <a href="/" class="text-blue-300 hover:underline text-sm">← Go Back to Upload</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6 text-center text-gray-400 text-sm">
+    &copy; 2025 FileSecuro. All rights reserved.
+  </footer>
+
+</body>
+</html>

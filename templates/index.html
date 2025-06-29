@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure File Upload</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col items-center space-y-2 md:flex-row md:justify-between md:space-y-0">
+      <h1 class="text-2xl font-bold text-blue-400">FileSecuro</h1>
+      <ul class="flex m-20">
+        <li><a href="/" class="hover:text-blue-300 m-40 text-lg">Home</a></li>
+        <li><a href="/files" class="hover:text-blue-300 m-40 text-lg">Files</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-cover bg-center h-[60vh]" style="background-image: url('https://images.unsplash.com/photo-1604079628043-b65c2fa6e0ed');">
+    <div class="h-full bg-black/60 flex items-center justify-center">
+      <div class="text-center px-6">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Secure Your Files with AES Encryption</h2>
+        <p class="text-lg text-gray-300">Upload, encrypt, and protect your sensitive documents with industry-grade encryption.</p>
+      </div>
+    </div>
+  </header>
+  <!-- Encryption Info Section -->
+<section id="encryption" class="py-16 px-6 md:px-16 bg-gray-900">
+  <div class="text-center mb-12">
+    <h3 class="text-3xl font-semibold text-blue-400 mb-4">Advanced Encryption Standard (AES)</h3>
+    <p class="text-gray-300 max-w-3xl mx-auto">AES is a symmetric encryption algorithm widely used across the globe to secure sensitive information. It offers 128-bit, 192-bit, and 256-bit key options, ensuring robust data protection.</p>
+  </div>
+  <div class="grid md:grid-cols-3 gap-6 items-center justify-center">
+    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-md">
+      <img src="https://cdn-icons-png.flaticon.com/512/564/564445.png" alt="AES Encryption Icon 1" class="w-full h-48 object-contain p-4">
+      <p class="text-center text-gray-300 p-2">AES Block Cipher Structure</p>
+    </div>
+    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-md">
+      <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" alt="Encryption Layers" class="w-full h-48 object-contain p-4">
+      <p class="text-center text-gray-300 p-2">Layered Security Mechanisms</p>
+    </div>
+    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-md">
+      <img src="https://cdn-icons-png.flaticon.com/512/10043/10043761.png" alt="Secure File Icon" class="w-full h-48 object-contain p-4">
+      <p class="text-center text-gray-300 p-2">Secured File Transfer</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Upload Form Section -->
+  <section id="files" class="py-16 px-6 md:px-16 bg-gray-800">
+    <div class="max-w-xl mx-auto text-center">
+      <h3 class="text-2xl font-semibold text-blue-400 mb-6">Upload a File (AES Encrypted)</h3>
+      <form method="POST" enctype="multipart/form-data" class="bg-gray-700 p-6 rounded-lg shadow-lg">
+        <input type="file" name="file" class="mb-4 w-full text-sm text-white bg-gray-800 border border-gray-600 rounded px-4 py-2">
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded text-white font-medium">Upload</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-1000 py-6 text-center text-gray-400 text-sm">
+    &copy; 2025 FileSecuro. All rights reserved.
+  </footer>
+
+</body>
+</html>
