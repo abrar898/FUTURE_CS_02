@@ -59,5 +59,71 @@ This is a secure file upload and download portal built with **Python Flask** tha
 
 ---
 
-## 📁 Folder Structure
+---
+
+## 🧪 How It Works
+
+1. **Upload** a file on `/` → the app encrypts and stores it in `uploads/`
+2. Visit `/files` to view a list of encrypted files
+3. Click:
+   - 🔒 **Download Encrypted** → downloads encrypted `.enc` file
+   - 🔓 **Decrypt & Download** → decrypts and downloads the usable file
+
+---
+
+## 🧩 Setup Instructions
+
+### 🔧 1. Clone the Repo
+
+```bash
+git clone https://github.com/your-username/secure-file-sharing.git
+cd secure-file-sharing
+🐍 2. Create Virtual Environment
+bash
+Copy
+Edit
+python -m venv venv
+▶️ 3. Activate Virtual Environment
+On Windows:
+
+bash
+Copy
+Edit
+venv\Scripts\activate
+On Linux/macOS:
+
+bash
+Copy
+Edit
+source venv/bin/activate
+📦 4. Install Dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+🚀 5. Run the App
+bash
+Copy
+Edit
+python app.py
+Then open your browser and go to:
+
+cpp
+Copy
+Edit
+http://127.0.0.1:5000
+🔍 Example Usage
+Upload myfile.pdf
+
+It gets encrypted and saved as encrypted_myfile.pdf.enc
+
+Go to /files → you’ll see encrypted_myfile.pdf.enc
+
+Click:
+
+🔒 Download Encrypted → to download the encrypted version
+
+🔓 Decrypt & Download → to download the original decrypted file
+
+
 
